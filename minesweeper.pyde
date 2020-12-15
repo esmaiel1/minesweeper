@@ -10,7 +10,7 @@ startY = 30
 endY = startY + (columns * cellH)
 cells = []
 mines = []
-mineNum = 50
+mineNum = 30
 checkedCells = [];
 
 def setup():
