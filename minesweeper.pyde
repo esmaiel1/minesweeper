@@ -71,8 +71,8 @@ def count_mines():
         
 # Reveals the cell depending on which conditon is true           
 def reveal(i):
-    global game_over
     # i = (X,Y) 
+    global game_over
     # True if the clicked cell is a mine
     if cells.index(i) in mines:
         fill(255,0,0)
@@ -88,7 +88,7 @@ def reveal(i):
     else:
         surroundings = surrounding_cells(i)
         for j in surroundings:
-            if j not in visible_cells and j not in mines:
+            if j not in visible_cells:
                 visible_cells.append(j)
                 reveal(cells[j]) 
         fill(255)   
