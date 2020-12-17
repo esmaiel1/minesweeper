@@ -1,5 +1,5 @@
 import random
-
+# The values of these variables can be changed if wanted 
 grid_width = 380
 grid_height = 380
 cell_width = 20
@@ -7,7 +7,7 @@ cell_height = 20
 rows = 16
 columns = 16
 mine_count = 40
-
+#########
 startX = 30
 endX = startX + (rows * cell_width)
 startY = 30
