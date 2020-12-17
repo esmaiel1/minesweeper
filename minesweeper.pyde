@@ -130,34 +130,36 @@ def minesAround(i,count):
     textAlign(CENTER)
     text(str(count),i[0],i[1],cell_width,cell_height)    
 
-
+# Ends the game 
 def endGame():
     global game_over
     game_over = True
     text('Game Over',endX/2,endY+cell_height)
 
-
+# reveal a cell and fills it with the color red
 def revealBomb(i):
     fill(255,0,0)
     rect(i[0],i[1],cell_width,cell_height)
 
-
+# reveal a cell and fills it with the color white then displays a number inside of it
 def revealNumber(i):
     fill(255)
     rect(i[0],i[1],cell_width,cell_height)
     minesAround(i,numbers[cells.index(i)])
-    
+
+# returns true if the given cell is a mine    
 def isABomb(i):
     return cells.index(i) in mines
 
+# returns true if the given cell contains a number  
 def isANumber(i):
     return numbers[cells.index(i)] != 0
 
-    
+# returns true if the given cell has already been revealed   
 def isVisible(cell):
     return cell in visible_cells
 
-
+# reveal a cell and fills it with the color white
 def revealWhiteSpace(i):
     fill(255)   
     rect(i[0],i[1],cell_width,cell_height)
