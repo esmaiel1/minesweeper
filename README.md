@@ -1,3 +1,3 @@
-# Minesweeper
+# Minesweeper project
 A minesweeper game 
 
